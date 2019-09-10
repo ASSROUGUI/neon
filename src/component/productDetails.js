@@ -62,7 +62,8 @@ import './css/ProductDetails.scss';
       {/* Product Pricing */}
       <div className="product-price">
         <span>90 SR</span>
-        <a href="#" className="cart-btn">Add to cart</a>
+        {/* <a href={'/cartItem'+props.product._id} className="cart-btn">Add to cart</a>
+        <Link to={'/cartItem'+props.product._id}> Add to cart </Link> */}
       </div>
     </div>
   </main>

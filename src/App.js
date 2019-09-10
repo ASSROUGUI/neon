@@ -12,7 +12,7 @@ import AlertDismissible from './auth/components/AlertDismissible'
 import Product from './component/product'; 
 import EditProduct from './component/editProduct' ; 
 import Footer from './component/Footer/Footer'; 
-import cartItem from './component/cartItem'; 
+import CartItem from './component/cartItem'; 
 import Products from './component/products'
 
 class App extends Component {
@@ -51,7 +51,9 @@ class App extends Component {
             <SignIn alert={this.alert} setUser={this.setUser} />
           )} />
           <Route path="/create" component={Product} />
-          <Route path="/edit/:id" component={EditProduct} /> 
+
+          <Route path="/cartItem" component={CartItem} />
+          {/* <Route path="/edit/:id" component={EditProduct} />  */}
           <Route path="/products" component={Products} /> 
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />

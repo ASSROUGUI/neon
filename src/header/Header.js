@@ -19,22 +19,44 @@ const unauthenticatedOptions = (
 )
 
 
+// const Product = props =>(
 
-const Header = ({ user }) => (
+
+//   <div className="Product-Wrapper">
+//   <div className="Product">
+//       <div className="Product-Image-Wrapper">
+//         <img src={props.product.image} className="Product-Image" />
+      
+//       </div>
+//     <div className="Product-Title">
+//       <p className="Product-Name">{props.product.name}</p>
+//     </div>
+//     <div className="Product-Data">
+//       <small className="Product-Price">{props.product.price}</small>
+//       <button onClick="" className="product-button Product-Add">Add to Cart</button>
+//     </div>
+
+
+//     </div>
+//    </div>
+// )
+const Header = ({ props }) => (
   
   <Navbar className="nav" color="light" light expand="md">
    <NavbarBrand href="/">Neon</NavbarBrand>
 
     <ul>
      <li className="nav-item" ><Link className="nav-link" to="/products">Products</Link></li>
-     <li className="nav-item" ><Link className="nav-link" to="/cart"><i className="material-icons">shopping_cart</i></Link></li>
+     <li className="nav-item" ><Link className="nav-link" to="/cartItem"><i className="material-icons">shopping cart</i></Link></li>
+   
    </ul>
 
   <header className="main-header">
-    { user && <span>Welcome, {user.email}</span>} 
-   { user ? authenticatedOptions : unauthenticatedOptions }
+    { props && <span>Welcome, {props.email}</span>} 
+   { props ? authenticatedOptions : unauthenticatedOptions }
 
   </header>
+  {/* <Link to={'/editProduct/'+props.header._id} class="btn btn-info" > Edit  </Link> */}
 
   <Link to="/create" className="nav-link"> Create product </Link>
 
